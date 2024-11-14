@@ -13,6 +13,9 @@ app_license = "mit"
 # app_include_css = "/assets/modern_desk1/css/modern_desk1.css"
 # app_include_js = "/assets/modern_desk1/js/modern_desk1.js"
 
+app_include_css =  ["/assets/modern_desk1/css/theme.css",]
+app_include_js = ["/assets/modern_desk1/js/theme.js",]
+
 # include js, css files in header of web template
 # web_include_css = "/assets/modern_desk1/css/modern_desk1.css"
 # web_include_js = "/assets/modern_desk1/js/modern_desk1.js"
@@ -159,6 +162,9 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
+override_whitelisted_methods = {
+    "frappe.core.doctype.user.user.switch_theme": "modern_desk1.overrides.switch_theme.switch_theme"
+}
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "modern_desk1.event.get_events"
 # }
